@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario en Iframe</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <!-- tus campos de formulario aquí -->
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Hacer lo que necesites con la lógica del formulario
+          // ...
+
+          // Una vez hecho, notificar a la página principal para que se redireccione
+          window.top.location.href =
+            "https://www.automovilclub.cl/thanks/form-enviado-seguro-automotriz/";
+        });
+    </script>
+  </body>
+</html>
